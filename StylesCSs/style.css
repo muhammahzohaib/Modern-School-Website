@@ -1,0 +1,627 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+/**/
+/*Declare a Css Varaiable and assign the vlaue in color form*/
+:root {
+  --color--primary: #6c63ff;
+  --color--success: #00bf8e;
+  --color--warning: #f7c94b;
+  --color--danger: #f75842;
+  --color--warning-variant: rgba(247, 88, 66, 0.4);
+  --color--white: #fff;
+  --color--light: rgba(255, 255, 255, 0.7);
+  --color--black: #000;
+  --color--bg: #1f2641;
+  --color--bg1: #2e3267;
+  --color--bg2: #424890;
+
+  --container-width-lg: 80%;
+  --container-width-md: 90%;
+  --container-width-sm: 94%;
+
+  --transition: all 400ms ease;
+}
+/* Deal with body*/
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.7;
+  background-color: var(--color--bg);
+  color: var(--color--white);
+}
+
+/*container*/
+.continer {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+/* set some basic value of these tag do not write agaain and again */
+section {
+  line-height: 6rem 0;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+h1,
+h1,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+}
+h1 {
+  font-size: 2.4rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1, 6rem;
+}
+h4 {
+  font-size: 1.3rem;
+}
+a {
+  color: var(--color--white);
+}
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.btn {
+  display: inline-block;
+  background: var(--color--white);
+  color: var(--color--black);
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  font-weight: 500;
+}
+.btn:hover {
+  background: transparent;
+  color: var(--color--white);
+  border-color: var(--color--white);
+}
+.btn-primary {
+  background: var(--color--danger);
+  color: var(--color--white);
+}
+/* 
+///////////////////////////////////////////////
+///                                         ///
+///           Nav bar                       ///
+///                                         ///
+///////////////////////////////////////////////
+*/
+nav {
+  background: transparent;
+  width: 100vw;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+}
+.nav_con {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_menu {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+nav button {
+  display: none;
+}
+.nav_menu a {
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+.nav_menu a:hover {
+  color: var(--color--bg2);
+}
+
+/*    Navbar color change when we scroll up and dowm         */
+.nav_scroll {
+  background: var(--color--primary);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+/* 
+///////////////////////////////////////////////
+///                                         ///
+///      Nav Bar end With media query       ///
+///                                         ///
+///////////////////////////////////////////////
+*/
+
+/* 
+///////////////////////////////////////////////
+///                                         ///
+///      header start                       ///
+///                                         ///
+///////////////////////////////////////////////
+*/
+header {
+  position: relative;
+  top: 5rem;
+  height: 70vh;
+  margin-bottom: 5rem;
+  overflow: hidden;
+}
+.header_con {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5rem;
+  height: 100%;
+}
+.header_left p {
+  margin: 1rem 0 2.4rem;
+}
+
+/* 
+///////////////////////////////////////////////
+///                                         ///
+///     end of  header section              ///
+///                                         ///
+///////////////////////////////////////////////
+*/
+
+/* 
+///////////////////////////////////////////////
+///                                         ///
+///     categories section  start           ///
+///                                         ///
+///////////////////////////////////////////////
+*/
+.categories {
+  background: var(--color--bg1);
+  padding: 5rem 0 5rem 0;
+  height: 32rem;
+  box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.3);
+}
+.categories h1 {
+  line-height: 1;
+  margin-bottom: 3rem;
+}
+.cate_con {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  /* gap: 4rem; */
+}
+.cate_left {
+  margin-right: 4rem;
+}
+.cate_left p {
+  margin: 1rem 0 3rem;
+}
+.cate_right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.catgeory {
+  background: var(--color--bg2);
+  padding: 2rem;
+  border-radius: 2rem;
+  transition: var(--transition);
+}
+.catgeory:hover {
+  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.category_icon {
+  background: var(--color--primary);
+  padding: 0.7rem;
+  border-radius: 0.9rem;
+}
+.catgeory:nth-child(2) .category_icon {
+  background: var(--color--danger);
+}
+
+.catgeory:nth-child(3) .category_icon {
+  background: var(--color--success);
+}
+
+.catgeory:nth-child(4) .category_icon {
+  background: var(--color--warning);
+}
+
+.catgeory:nth-child(5) .category_icon {
+  background: var(--color--success);
+}
+
+.catgeory h5 {
+  margin: 2rem 0 1rem;
+}
+.catgeory p {
+  font-size: 0.85rem;
+}
+
+/* 
+///////////////////////////////////////////////
+///                                         ///
+///     categories section  end             ///
+///                                         ///
+///////////////////////////////////////////////
+*/
+
+/* 
+///////////////////////////////////////////////
+///                                         ///
+///     Courses  section  start             ///
+///                                         ///
+///////////////////////////////////////////////
+*/
+.courses {
+  margin-top: 15rem;
+}
+.courses_continer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.course {
+  background: var(--color--bg1);
+  text-align: center;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+.course:hover {
+  background: transparent;
+  border-color: var(--color--primary);
+}
+
+.courses_information {
+  padding: 2rem;
+}
+.courses_information p {
+  margin: 1.2rem 0 2rem 0;
+  font-size: 0.9rem;
+}
+/* 
+///////////////////////////////////////////////
+///                                         ///
+///     Courses  section  end               ///
+///                                         ///
+///////////////////////////////////////////////
+*/
+
+/* 
+///////////////////////////////////////////////
+///                                         ///
+///    FAQS   section  start                  ///
+///                                         ///
+///////////////////////////////////////////////
+*/
+.faqs {
+  margin-top: 8rem;
+  background: var(--color--bg1);
+  box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.3rem;
+}
+
+.faqs h2 {
+  padding-top: 5rem;
+  margin-top: 3rem;
+}
+.FAQ_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding-bottom: 8rem;
+}
+.faq {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 2rem;
+  height: fit-content;
+  background: var(--color--primary);
+  cursor: pointer;
+}
+.faq h4 {
+  font-size: 1rem;
+  line-height: 2.2;
+}
+.faq_icon {
+  align-self: flex-start;
+  font-size: 1.2rem;
+}
+.faq p {
+  margin-top: 0.8rem;
+  display: none;
+}
+
+.faq.open p {
+  display: block;
+}
+
+/* 
+///////////////////////////////////////////////
+///                                         ///
+///    FAQS   section  end                  ///
+///                                         ///
+///////////////////////////////////////////////
+*/
+
+/* 
+///////////////////////////////////////////////
+///                                         ///
+///    student memorila   section  start    ///
+///                                         ///
+///////////////////////////////////////////////
+*/
+.testinomial_container {
+  margin-top: 8rem;
+  padding-top: 5rem;
+  overflow-x: hidden;
+  margin-bottom: 8rem;
+}
+.avatar {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1rem;
+  border: 1rem solid var(--color--bg1);
+}
+.testinomial {
+  padding-top: 2rem;
+}
+.testinomial_info {
+  text-align: center;
+}
+/* .test_allgrid{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+} */
+.testinomial_body {
+  background: var(--color--primary);
+  padding: 2rem;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.testinomial_body::before {
+  content: "";
+  display: block;
+  background: linear-gradient(
+    135deg,
+    transparent,
+    var(--color--primary),
+    var(--color--primary)
+  );
+  height: 3rem;
+  width: 3rem;
+  position: absolute;
+  left: 50%;
+  top: -1.5rem;
+  transform: rotate(45deg);
+}
+
+footer {
+  background: var(--color--bg1);
+  padding-top: 5rem;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+}
+.footer_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+}
+.footer_container > div h4 {
+  margin-bottom: 1.2rem;
+}
+.footer_social {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+footer_1 p {
+  margin: 0 0 2rem;
+}
+.footer ul li {
+  margin-bottom: 0.7rem;
+}
+footer ul li a :hover {
+  text-decoration: underline;
+}
+.footer_copy {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 1.2rem 0rem;
+  border-top: 1px solid var(--color--bg2);
+}
+
+/* 
+///////////////////////////////////////////////
+///                                         ///
+///     Responsive web                      ///
+///                                         ///
+///////////////////////////////////////////////
+*/
+@media screen and (max-width: 1024px) {
+  .continer {
+    width: 90%;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+  }
+  h3 {
+    font: size 1.4rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  /*          nav bar          */
+
+  nav button {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color--white);
+    cursor: pointer;
+    font-size: 1.6rem;
+  }
+  nav button#close-menu-btn {
+    display: none;
+  }
+  .nav_menu {
+    position: fixed;
+    right: 8%;
+    top: 4rem;
+    display: flex;
+    height: fit-content;
+    width: 18rem;
+    flex-direction: column;
+    display: none;
+    gap: 0rem;
+  }
+
+  .nav_menu li {
+    width: 100%;
+    height: 5.6rem;
+    animation: identifier 1s linear forwards;
+    -webkit-animation: identifier 1s linear forwards;
+    transform-origin: top right;
+    opacity: 0;
+  }
+  .nav_menu li:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  .nav_menu li:nth-child(3) {
+    animation-delay: 1s;
+  }
+  .nav_menu li:nth-child(4) {
+    animation-delay: 1.5s;
+  }
+  .nav_menu li a {
+    background-color: var(--color--primary);
+    box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .nav_menu li a:hover {
+    color: var(--color--white);
+    background-color: var(--color--bg2);
+  }
+  @keyframes identifier {
+    0% {
+      transform: rotateZ(-90deg);
+      -webkit-transform: rotateZ(-90deg);
+      -moz-transform: rotateZ(-90deg);
+      -ms-transform: rotateZ(-90deg);
+      -o-transform: rotateZ(-90deg);
+    }
+    100% {
+      transform: rotateZ(0);
+      -webkit-transform: rotateZ(0);
+      -moz-transform: rotateZ(0);
+      -ms-transform: rotateZ(0);
+      -o-transform: rotateZ(0);
+      opacity: 1;
+    }
+  }
+  .header_con {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+.categories{
+  height: fit-content;
+}
+  .cate_con {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  }
+  .courses{
+    margin-top: 5rem;
+  }
+  .courses_continer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    
+    
+    
+  }
+  .course{
+    width: 100%;
+  }
+  .FAQ_container{
+    grid-template-columns: 1fr;
+  }
+  .faq{
+    padding: 1.5srem;
+  }
+    .footer_container{
+      grid-template-columns:1fr 1fr
+    }
+}
+ @media screen and  (max-width: 600px){
+ 
+ 
+  .nav_menu{
+    right: 3%;
+  }
+  header{
+    height:auto ;
+    margin-bottom: 10rem;
+    
+  }
+  .header_con{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .header_left{
+    margin-bottom: 1.3rem;
+  }
+  .cate_con{
+    text-align: center;
+    
+  }
+  .cate_right{
+    grid-template-columns: 1fr 1fr ;
+    gap: 0.5rem;
+  }
+  .catgeory{
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+  .category_icon{
+    margin-top: 1rem;
+    display: inline-block;
+  }
+  .courses_continer{
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
+  .testinomial_body{
+    padding: 1rem;
+  }
+  .faq{
+    padding: 0.5rem;
+    gap: 0.9rem;
+  }
+ 
+  
+}
