@@ -69,8 +69,8 @@ You only need a web browser to view the static site. To make changes to the styl
 ## 📧 Contact
 
 **Muhamad Zohaib**
-- Email: zobhicode786@gmail.com
-- Portfolio/Socials: [Your Links Here]
+- Email: muhammadzohaib1090@gmail.com
+- Portfolio: https://www.linkedin.com/in/muhamadzohaib/
 
 ---
 ⭐️ Feel free to star this repository if you find it helpful!
