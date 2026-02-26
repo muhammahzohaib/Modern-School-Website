@@ -2,7 +2,6 @@
 
 A fully responsive, modern multi-page school website built with clean HTML, CSS, and interactive JavaScript components.
 
-![Preview Image](./images/header.svg)
 
 ## 🌟 Key Features
 
@@ -62,9 +61,6 @@ You only need a web browser to view the static site. To make changes to the styl
 - Simply open `index.html` in your favorite browser.
 - Or use a "Live Server" extension in VS Code for a better development experience.
 
-## 📸 Screenshots
-
-*Add screenshots here to showcase your beautiful design!*
 
 ## 📧 Contact
 
