@@ -2,6 +2,23 @@
 
 A fully responsive, modern multi-page school website built with clean HTML, CSS, and interactive JavaScript components.
 
+## 🖼️ Preview
+
+### Home Page
+![Home Page](images/ss/hero_section.png)
+
+### Categories
+![Categories](images/ss/categories.png)
+
+### Popular Courses
+![Popular Courses](images/ss/popular_courses.png)
+
+### FAQ Section
+![FAQ Section](images/ss/faq.png)
+
+### Student Testimonials
+![Testimonials](images/ss/testimonials.png)
+
 
 ## 🌟 Key Features
 
